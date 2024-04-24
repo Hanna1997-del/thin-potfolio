@@ -1,10 +1,10 @@
 import Card from "@/components/Card";
 
-interface aboutProps {
+interface AboutProps {
     
 }
  
-const about: React.FC<aboutProps> = () => {
+const About: React.FC<AboutProps> = () => {
     return ( 
         <>
         <Card/>
@@ -17,4 +17,4 @@ const about: React.FC<aboutProps> = () => {
      );
 }
  
-export default about;
+export default About;

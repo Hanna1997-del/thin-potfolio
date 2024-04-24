@@ -4,11 +4,11 @@ import Card from "@/components/Card";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 
-interface projectsProps {
+interface ProjectsProps {
     
 }
  
-const projects: React.FC<projectsProps> = () => {
+const Projects: React.FC<ProjectsProps> = () => {
    const{color} = useContext(ColorContext)
     return ( 
         <>
@@ -30,4 +30,4 @@ const projects: React.FC<projectsProps> = () => {
      );
 }
  
-export default projects;
+export default Projects;

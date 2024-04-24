@@ -4,11 +4,11 @@ import Card from "@/components/Card";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 
-interface contactProps {
+interface ContactProps {
     
 }
  
-const contact: React.FC<contactProps> = () => {
+const Contact: React.FC<ContactProps> = () => {
     const{color} = useContext(ColorContext)
     return (
         <>
@@ -40,4 +40,4 @@ const contact: React.FC<contactProps> = () => {
       );
 }
  
-export default contact;
+export default Contact;
