@@ -19,7 +19,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               style={{
                color
               }}
-             >I can't show projects because of our company.</motion.h3>
+             >I can&apos;t show projects because of our company.</motion.h3>
              <div className="lg:flex gap-10 mt-8">
              
                 <img src="https://i.pinimg.com/236x/48/f6/31/48f631b93e9e1f42318e968e3bd3bb49.jpg" alt="" className="rounded-lg h-[300px]" />

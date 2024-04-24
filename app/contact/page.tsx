@@ -19,7 +19,7 @@ const Contact: React.FC<ContactProps> = () => {
                 style={{
                     color
                 }}
-                className="text-5xl  font-bold leading-[3.5rem]">LET'S MAKE SOMETHING AMAZING!</motion.h1>
+                className="text-5xl  font-bold leading-[3.5rem]">LET&apos;S MAKE SOMETHING AMAZING!</motion.h1>
                 <div className="flex  items-center mt-16">
                     <img src="https://i.pinimg.com/236x/a7/8e/22/a78e2233bfe227464ad3896475b9650d.jpg" alt="" className="w-16 h-16 rounded-full" />
                     <div className="text-white ">
