@@ -54,7 +54,7 @@ const Card: React.FC<CardProps> = () => {
                 border,
                 boxShadow
               }}
-            className=" w-[300px] lg:w-[400px] h-[50px] hidden lg:absolute bottom-[20px] lg:bottom-[-10px] px-10 left-[3rem] lg:left-[400px]  bg-[#5C5470] text-white rounded-full">
+            className=" w-[300px] lg:w-[400px] h-[50px] hidden lg:flex absolute bottom-[20px] lg:bottom-[-10px] px-10 left-[3rem] lg:left-[400px]  bg-[#5C5470] text-white rounded-full">
               <div className="flex  justify-around  pt-3 gap-5">
               <Link href="/">Home</Link>
               <Link href="/projects">Projects</Link>
