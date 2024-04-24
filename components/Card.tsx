@@ -1,14 +1,20 @@
 "use client";
 import { ColorContext } from "@/Provider/Provider";
+import clsx from "clsx";
+
 import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 interface CardProps {
     
 }
  
 const Card: React.FC<CardProps> = () => {
+  const[open,setIsOpen] = useState<boolean>(false)
+ 
     const{color} = useContext(ColorContext)
 
     const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #222831 50% , ${color})`;
@@ -21,15 +27,13 @@ const Card: React.FC<CardProps> = () => {
             backgroundImage
          }}
         className="lg:w-[200vh] w-[70vh] lg:h-[90vh]  relative  bg-[#352F44] lg:rounded-3xl">
-            <div className="  relative flex justify-between ">
-            {/* <div className="absolute top-1 left-10 ">
-            <p className="text-[#B4B4B8]">longitude <span className="text-white">~ 28.6542</span></p>
-               <p className="text-[#B4B4B8]">latitude <span className="text-white">- 772373</span></p>
+            <div className=" hidden relative lg:flex justify-between ">
+            <div className="absolute top-2 left-10 ">
+            <FaFacebook size={30} className="text-white" />
             </div>
-            <div className="absolute top-1 right-10">
-            <p className="text-[#B4B4B8]">Chrome v119.0.0.0 <span className="text-white">~ Browser</span></p>
-            <p className="text-[#B4B4B8]">Window 10 <span className="text-white">- OS</span></p>
-            </div> */}
+            <div className="absolute top-2 right-10">
+            <FaLinkedin  size={30} className="text-white" />
+            </div>
             </div>
 
           
@@ -50,14 +54,37 @@ const Card: React.FC<CardProps> = () => {
                 border,
                 boxShadow
               }}
-            className=" w-[300px] lg:w-[400px] h-[50px] absolute bottom-[20px] lg:bottom-[-10px] px-10 left-[3rem] lg:left-[400px]  bg-[#5C5470] text-white rounded-full">
-              <div className="flex justify-around  pt-3 gap-5">
+            className=" w-[300px] lg:w-[400px] h-[50px] hidden lg:absolute bottom-[20px] lg:bottom-[-10px] px-10 left-[3rem] lg:left-[400px]  bg-[#5C5470] text-white rounded-full">
+              <div className="flex  justify-around  pt-3 gap-5">
               <Link href="/">Home</Link>
               <Link href="/projects">Projects</Link>
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>
               </div>
             </motion.div>
+
+            <div  className="absolute top-[1.7rem] right-[1rem] z-20 cursor-pointer lg:hidden w-[3rem] h-[3rem] rounded-full flex  justify-center items-center shadow "
+            onClick={() => setIsOpen((pre) => !pre)} >
+              <GiHamburgerMenu size={30} className={clsx(open? "text-black" : "text-white")}  />
+              
+            </div>
+           
+             <div className={clsx(
+              "fixed flex flex-col items-center gap-2 right-0 z-10 w-[100vw]  h-[85vh] bg-white mt-[-100vh]",
+              open && "mt-[0vh]"
+             )}>
+               <ul className=" flex flex-col mt-28 gap-10 text-3xl font-bold">
+               <Link href="/">Home</Link>
+              <Link href="/projects">Projects</Link>
+              <Link href="/about">About</Link>
+              <Link href="/contact">Contact</Link>
+               </ul>
+               <div className="flex mt-20 gap-10">
+               <FaFacebook size={30} className="text-black" />
+               <FaLinkedin  size={30} className="text-black" />
+               </div>
+             </div>
+           
         </motion.div>
     </div>
      );

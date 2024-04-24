@@ -48,7 +48,7 @@ const Hero: React.FC<HeroProps> = () => {
       <Card />
       <motion.div
        
-      className="text-white absolute top-36 overflow-hidden flex flex-col gap-8 left-[8rem] lg:left-[30rem]">
+      className="text-white absolute top-52 lg:top-36 overflow-hidden flex flex-col gap-8 left-[8rem] lg:left-[30rem]">
         <motion.h2 
         variants={intro1Variants}
         initial="hidden"
