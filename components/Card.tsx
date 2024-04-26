@@ -63,9 +63,9 @@ const Card: React.FC<CardProps> = () => {
               </div>
             </motion.div>
 
-            <div  className="absolute top-[1.7rem] right-[4rem] z-20 cursor-pointer lg:hidden w-[3rem] h-[3rem] rounded-full flex  justify-center items-center shadow "
+            <div  className="absolute top-[1.7rem] right-[1rem] z-20 cursor-pointer lg:hidden w-full  rounded-full flex  justify-center items-center shadow "
             onClick={() => setIsOpen((pre) => !pre)} >
-              <GiHamburgerMenu size={30} className={clsx(open? "text-black" : "text-white")}  />
+              <GiHamburgerMenu size={30} className={clsx(open? "text-black " : "text-white ")}  />
               
             </div>
            
